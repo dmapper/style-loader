@@ -20,7 +20,7 @@ module.exports.pitch = function(remainingRequest) {
 		"// Hot Module Replacement",
 		"if(module.hot) {",
 		"	// When the styles change, update the <style> tags",
-		"	if(!content.locals) {",
+		"	if(!content.locals || true) {",
 		"		module.hot.accept(" + loaderUtils.stringifyRequest(this, "!!" + remainingRequest) + ", function() {",
 		"			var newContent = require(" + loaderUtils.stringifyRequest(this, "!!" + remainingRequest) + ");",
 		"			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];",
